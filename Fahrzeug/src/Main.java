@@ -14,7 +14,6 @@ public class Main extends Fahrzeug {
 	static int baujahr;
 	static double grundpreis;
 	static int id;
-	
 
 	public static void main(String[] args){
 		Fahrzeug object1 = new Main(marke, modell, baujahr, grundpreis, id);
