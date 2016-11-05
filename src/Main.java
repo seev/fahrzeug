@@ -20,7 +20,6 @@ public class Main extends Fahrzeug {
 		
 		System.out.println(object1);
 		//System.out.println(cal.get(Calendar.YEAR));
-		id++;
 	}
 
 	

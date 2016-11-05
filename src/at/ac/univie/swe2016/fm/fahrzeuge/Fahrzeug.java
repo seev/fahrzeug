@@ -32,7 +32,11 @@ public abstract class Fahrzeug implements Serializable {
 	
 
 	public void setMarke(String marke) {
-		this.marke = marke;
+		if (marke.isEmpty()){
+			throw new IllegalArgumentException("Marke nicht eingetragen!");
+		}
+		else 
+			this.marke = marke;
 	}
 
 
@@ -42,7 +46,11 @@ public abstract class Fahrzeug implements Serializable {
 
 
 	public void setModell(String modell) {
-		this.modell = modell;
+		if (modell.isEmpty()){
+			throw new IllegalArgumentException("Modell nicht eingetragen!");
+		}
+		else 
+			this.modell = modell;
 	}
 
 
@@ -69,7 +77,7 @@ public abstract class Fahrzeug implements Serializable {
 
 
 	public void setGrundpreis(double grundpreis) {
-		if (grundpreis >= 0){
+		if (grundpreis > 0){
 			throw new IllegalArgumentException("Grundpreis falsch eingetragen!");
 		}
 		

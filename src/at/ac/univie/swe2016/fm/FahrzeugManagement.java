@@ -6,6 +6,4 @@ public class FahrzeugManagement {
 	
 	//FahrzeugDAO fc = new SerializedFahrzeugDAO(path);
 	
-	
-
 }

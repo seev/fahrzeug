@@ -46,7 +46,7 @@ public class SerializedFahrzeugDAO implements FahrzeugDAO {
 	}
 
 	@Override
-	public void loadFahrzeug(Fahrzeug fharzeug) {
+	public void loadFahrzeug(Fahrzeug fahrzeug) {
 		// TODO Auto-generated method stub
 		
 	}
