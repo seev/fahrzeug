@@ -8,6 +8,11 @@ public class LKW extends Fahrzeug{
 		
 		return 0;
 	}
+	
+	//Constructor
+	public LKW(String marke, String modell, int baujahr, double grundpreis, int id) {
+		super(marke, modell, baujahr, grundpreis, id);
+		}
 
 
 	@Override

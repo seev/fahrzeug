@@ -78,7 +78,7 @@ public abstract class Fahrzeug implements Serializable {
 
 
 	public void setGrundpreis(double grundpreis) {
-		if (grundpreis > 0){
+		if (grundpreis < 0){
 			throw new IllegalArgumentException("Grundpreis falsch eingetragen!");
 		}
 		

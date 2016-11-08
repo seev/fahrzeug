@@ -17,6 +17,11 @@ public class PKW extends Fahrzeug {
 		return 0;
 	}
 	
+	//Constructor
+	public PKW(String marke, String modell, int baujahr, double grundpreis, int id) {
+		super(marke, modell, baujahr, grundpreis, id);
+		}
+	
 	@Override
 	public double getRabatt() {
 		int prozent = getAlter(getBaujahr())*5+(2* this.pruefung().get(Calendar.YEAR));

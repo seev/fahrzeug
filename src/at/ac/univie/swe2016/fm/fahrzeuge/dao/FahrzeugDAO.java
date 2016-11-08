@@ -7,6 +7,7 @@ public interface FahrzeugDAO {
 	
 	public void saveFahrzeug(Fahrzeug fahrzeug);
 	public void loadFahrzeug(Fahrzeug fharzeug);
+	public void removeFahrzeug(Fahrzeug fharzeug);
 	
 	public ArrayList<Fahrzeug> getFahrzeugList();
 	public Fahrzeug getFahrzeugbyList(int id);
