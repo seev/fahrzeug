@@ -14,6 +14,7 @@ public abstract class Fahrzeug implements Serializable {
 	private int baujahr;
 	private double grundpreis;
 	private int id;
+//	public int d = 0;
 	
 	//Constructor
 	public Fahrzeug(String marke, String modell, int baujahr, double grundpreis, int id) {
@@ -92,6 +93,8 @@ public abstract class Fahrzeug implements Serializable {
 
 
 	public void setId(int id) {
+//		d += 1;
+//		id = d;
 		this.id = id;
 	}
 
