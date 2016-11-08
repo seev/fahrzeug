@@ -22,6 +22,15 @@ public class PKW extends Fahrzeug {
 		super(marke, modell, baujahr, grundpreis, id);
 		}
 	
+	public void setLetzteUeberpruefung(Calendar ueberpruefung) {
+		this.pruefung = ueberpruefung;
+		}
+	
+	public void setLetzteUeberpruefung() {
+		Calendar now = Calendar.getInstance();
+		this.pruefung = now;
+	}
+	
 	@Override
 	public double getRabatt() {
 		int prozent = getAlter(getBaujahr())*5+(2* this.pruefung().get(Calendar.YEAR));
@@ -44,5 +53,18 @@ public class PKW extends Fahrzeug {
 	public void setPruefung(Calendar pruefung) {
 		this.pruefung = pruefung;
 	}
+	
+	@Override
+	public String toString(){
+		String ausgabe = "Typ: PKW\n";
+		ausgabe += "Id: " + this.getId() + "\n";
+		ausgabe += "Marke: " + this.getMarke() + "\n";
+		ausgabe += "Modell: " + this.getModell() + "\n";
+		ausgabe += "Baujahr: " + this.getBaujahr() + "\n";
+		ausgabe += "Grundpreis: " + this.getGrundpreis() + "\n";
+		ausgabe += "Preis: " + this.getGrundpreis() + "\n";
+
+		return ausgabe;
+		}
 	
 }

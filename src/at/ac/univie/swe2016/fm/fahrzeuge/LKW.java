@@ -24,5 +24,18 @@ public class LKW extends Fahrzeug{
 		
 		return getGrundpreis()*(prozent/100);
 	}
+	
+	@Override
+	public String toString(){
+		String ausgabe = "Typ: LKW\n";
+		ausgabe += "Id: " + this.getId() + "\n";
+		ausgabe += "Marke: " + this.getMarke() + "\n";
+		ausgabe += "Modell: " + this.getModell() + "\n";
+		ausgabe += "Baujahr: " + this.getBaujahr() + "\n";
+		ausgabe += "Grundpreis: " + this.getGrundpreis() + "\n";
+		ausgabe += "Preis: " + this.getGrundpreis() + "\n";
+
+		return ausgabe;
+		}
 
 }

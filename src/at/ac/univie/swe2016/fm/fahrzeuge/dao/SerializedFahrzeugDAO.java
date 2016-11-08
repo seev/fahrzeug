@@ -22,7 +22,7 @@ public class SerializedFahrzeugDAO implements FahrzeugDAO {
 	
 	
 	@Override
-	public ArrayList getFahrzeugList() {
+	public ArrayList<Fahrzeug> getFahrzeugList() {
 		
 		ArrayList<Fahrzeug> fahrzeuge = new ArrayList<Fahrzeug>();
 		
@@ -33,7 +33,7 @@ public class SerializedFahrzeugDAO implements FahrzeugDAO {
             ois.close();
         }
         catch(Exception e) {
-        	e.printStackTrace();
+        	//e.printStackTrace();
         }
 		
 		return fahrzeuge;
@@ -43,17 +43,17 @@ public class SerializedFahrzeugDAO implements FahrzeugDAO {
 	@Override
 	public void saveFahrzeug(Fahrzeug fahrzeug) {
 		// TODO Auto-generated method stub
-		 ArrayList<Fahrzeug> farzeuge = this.getFahrzeugList();
-	     farzeuge.add(fahrzeug);
-	     try {
-	    	 FileOutputStream fos = new FileOutputStream(this.path);
-	         ObjectOutputStream oos = new ObjectOutputStream(fos);
-	         oos.writeObject(farzeuge);
-	         oos.close();
-	         }
-	     catch(Exception e) {
-	    	 e.printStackTrace();
-	    	 }
+		 ArrayList<Fahrzeug> fahrzeuge = this.getFahrzeugList();
+		 fahrzeuge.add(fahrzeug);
+		 try {
+	            FileOutputStream fos = new FileOutputStream(this.path);
+	            ObjectOutputStream oos = new ObjectOutputStream(fos);
+	            oos.writeObject(fahrzeuge);
+	            oos.close();
+	        }
+	        catch(Exception e) {
+	            //e.printStackTrace();
+	        }
 		
 	}
 
